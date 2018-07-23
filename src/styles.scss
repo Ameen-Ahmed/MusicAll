@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+  font-family: Roboto;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 719px) {
+  .mat-checkbox-inner-container {
+    height: 30px!important;
+    width: 30px!important;
+    margin: 5px auto 5px 10px!important;
+  }
+
+  .mat-checkbox-layout {
+    width: 100%;
+  }
+  .mat-checkbox-label {
+    margin: auto!important;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}
+
+footer {
+  background-color: gray;
+  height: 70px;
+  margin-top: 20px;
+  p {
+    text-align: center;
+    font-size: .8em;
+  }
+}
+
+@import '~@angular/material/theming';
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$app-primary: mat-palette($mat-gray);
+$app-accent:  mat-palette($mat-red);
+
+
+// Create the theme object (a Sass map containing all of the palettes).
+$app-theme: mat-light-theme($app-primary, $app-accent);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($app-theme);

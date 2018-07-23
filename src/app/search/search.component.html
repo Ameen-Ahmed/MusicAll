@@ -1,0 +1,28 @@
+<header>
+    <h1 class="mat-display-1">Song Search</h1>
+    <h2>Search for songs across multiple platforms</h2>
+  </header>
+<div class="form">
+  <mat-form-field>
+    <input matInput [(ngModel)]="searchOptions.query" type="text" name="query" placeholder="Search Keywords">
+  </mat-form-field>
+
+  <mat-select name="type" [(ngModel)]="searchOptions.type" placeholder="Choose a Media Type">
+    <mat-option value="song">Song</mat-option>
+    <mat-option value="album">Album</mat-option>
+    <mat-option value="artist">Artist</mat-option>
+  </mat-select>
+
+  <label class="form-label">How many items would you like to search for?</label>
+  <mat-slider thumbLabel [(ngModel)]="searchOptions.limit" [displayWith]="formatLabel" tickInterval="1" step="1" min="1" max="5"></mat-slider>
+
+  <label class="form-label">What streaming platforms would you like to search?</label>
+  <div id="checkbox-container">
+      <mat-checkbox [(ngModel)]="platforms[key]" value="key" name="media" *ngFor="let key of platform_keys">{{ key | titlecase }}</mat-checkbox>
+  </div>
+
+  <div id="button-container">
+    <button mat-raised-button id="search" type="submit" (click)="post()">Submit Search</button>
+    <button mat-raised-button id="cancel" type="reset" (click)="cancel()">Cancel</button>
+  </div>
+</div>

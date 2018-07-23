@@ -1,0 +1,75 @@
+.form {
+  width: 80%;
+  margin: 0 auto;
+}
+mat-form-field {
+  display: block;
+  margin: 10px auto;
+}
+
+mat-select {
+  display: block;
+  margin: 20px auto;
+}
+
+mat-slider {
+  display: block;
+  margin: 10px auto 20px auto;
+}
+
+.form-label {
+  font-weight: 550;
+}
+
+#checkbox-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: 30px auto;
+  justify-content: space-around;
+}
+
+#button-container {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto 0 auto;
+}
+@media screen and (min-width: 720px) {
+  #checkbox-container {
+    position: static;
+    flex-direction: row;
+  }
+  #button-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  button {
+    width: 35%;
+  }
+}
+
+
+header {
+  min-height: 180px;
+  background-color: #a92f26;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+h1, h2 {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  top: 30px;
+  font-size: 2.75em;
+  // top: calc(50% - 20px);
+  font-weight: 300;
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 1em;
+  font-style: normal;
+}
