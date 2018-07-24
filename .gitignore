@@ -43,5 +43,4 @@ Thumbs.db
 /coverage
 
 # Sensitive Files
-server/app/controllers/credentials/
 *.bat
