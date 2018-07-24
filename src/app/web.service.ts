@@ -7,7 +7,7 @@ import { merge, ReplaySubject } from 'rxjs';
   providedIn: 'root'
 })
 export class WebService {
-  BASE_URL = 'http://localhost:3000/api';
+  BASE_URL = 'https://songsearch.herokuapp.com/api';
 
   private resultObs$: ReplaySubject<any> = new ReplaySubject(5);
   private lastSearch: Object;

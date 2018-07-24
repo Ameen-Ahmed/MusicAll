@@ -1,10 +1,14 @@
 {
   "name": "song-search2",
   "version": "0.0.0",
+  "engines": {
+    "npm": "6.2.x"
+  },
   "description": "This is a MEAN stack web application that allows users to search for songs across multiple media streaming platforms.",
   "main": "server/app/bin/www",
   "scripts": {
-    "start": "npm run build && npm run server:start",
+    "heroku-postbuild": "ng build --prod",
+    "start": "npm run server:start",
     "ng": "ng",
     "serve": "ng serve",
     "build": "ng build",

@@ -87,9 +87,10 @@ async function parsePage(page, type) {
 }
 
 async function search(req, res) {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
   const page = await browser.newPage();
   const parameters = normalizeParameters(req.body);
+
   await page.goto(
     `https://soundcloud.com/search/${parameters['type']}?q=${parameters['query']}`);
 
