@@ -9,8 +9,8 @@
 
   <mat-select name="type" [(ngModel)]="searchOptions.type" placeholder="Choose a Media Type">
     <mat-option value="song">Song</mat-option>
-    <mat-option value="album">Album</mat-option>
-    <mat-option value="artist">Artist</mat-option>
+    <mat-option value="album">Album (*Experimental)</mat-option>
+    <mat-option value="artist">Artist (*Experimental)</mat-option>
   </mat-select>
 
   <label class="form-label">How many items would you like to search for?</label>
@@ -18,7 +18,10 @@
 
   <label class="form-label">What streaming platforms would you like to search?</label>
   <div id="checkbox-container">
-      <mat-checkbox [(ngModel)]="platforms[key]" value="key" name="media" *ngFor="let key of platform_keys">{{ key | titlecase }}</mat-checkbox>
+      <mat-checkbox [(ngModel)]="platforms[key]" value="key" name="media" *ngFor="let key of platform_keys">
+          {{ key | titlecase }}
+          <span *ngIf="key == 'soundcloud';">(*Experimental)</span>
+      </mat-checkbox>
   </div>
 
   <div id="button-container">
