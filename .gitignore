@@ -42,5 +42,5 @@ Thumbs.db
 /.nyc_output
 /coverage
 
-# Sensitive Files
+# Batch Files
 *.bat
