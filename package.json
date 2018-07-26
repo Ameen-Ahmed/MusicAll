@@ -4,18 +4,17 @@
   "engines": {
     "npm": "6.2.x"
   },
-  "description": "This is a MEAN stack web application that allows users to search for songs across multiple media streaming platforms.",
+  "description": "This is a Node.js, Angular 6, and Express web application that allows users to search for music across multiple media streaming platforms.",
   "main": "server/app/bin/www",
   "scripts": {
     "heroku-postbuild": "ng build --prod",
-    "start": "npm run server:start",
+    "start": "node server/app/bin/www",
     "ng": "ng",
     "serve": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "server:start": "node server/app/bin/www",
     "server:nodemon": "nodemon server/app/bin/www",
     "server:eslint": "eslint server/",
     "server:mocha": "cross-env DEBUG=Song2Search:* mocha",
