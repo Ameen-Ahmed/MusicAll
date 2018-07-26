@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Router } from '@angular/router';
 import { merge, ReplaySubject } from 'rxjs';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WebService {
-  BASE_URL = 'https://songsearch.herokuapp.com/api';
+  BASE_URL: string = environment.hostUrl + '/api';
 
   private resultObs$: ReplaySubject<any> = new ReplaySubject(5);
   private lastSearch: Object;
