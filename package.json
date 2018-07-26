@@ -16,8 +16,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "server:nodemon": "nodemon server/app/bin/www",
-    "server:eslint": "eslint server/",
-    "server:mocha": "cross-env DEBUG=Song2Search:* mocha",
+    "server:lint": "eslint server/",
+    "server:test": "cross-env DEBUG=Song2Search:* mocha",
     "server:coverage": "cross-env DEBUG=Song2Search:* nyc --reporter=text --reporter=html mocha"
   },
   "repository": {
