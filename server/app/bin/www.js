@@ -5,7 +5,7 @@
 */
 
 var app = require("../app");
-var debug = require("debug")("Song2Search:server");
+var debug = require("debug")("MusicAll:server");
 var http = require("http");
 
 /**

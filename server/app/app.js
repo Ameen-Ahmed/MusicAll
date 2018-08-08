@@ -8,7 +8,7 @@ const path = require('path');
 const app = express();
 const apiRouter = require("./routes/api");
 
-app.use(express.static(path.join(__dirname, '../../dist/SongSearch2')));
+app.use(express.static(path.join(__dirname, '../../dist/MusicAll')));
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

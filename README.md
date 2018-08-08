@@ -1,4 +1,4 @@
-# Song2Search
+# MusicAll
 
 This is a Node.js, Angular 6, and Express web application that allows users to search for music across multiple media streaming platforms. 
 

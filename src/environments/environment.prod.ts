@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  hostUrl: 'https://songsearch.herokuapp.com'
+  hostUrl: 'https://music-all.herokuapp.com'
 };

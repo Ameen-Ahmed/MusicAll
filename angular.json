@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "SongSearch2": {
+    "MusicAll": {
       "root": "angular",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/SongSearch2",
+            "outputPath": "dist/MusicAll",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "SongSearch2:build"
+            "browserTarget": "MusicAll:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "SongSearch2:build:production"
+              "browserTarget": "MusicAll:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SongSearch2:build"
+            "browserTarget": "MusicAll:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "SongSearch2-e2e": {
+    "MusicAll-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "SongSearch2:serve"
+            "devServerTarget": "MusicAll:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "SongSearch2:serve:production"
+              "devServerTarget": "MusicAll:serve:production"
             }
           }
         },
@@ -123,7 +123,7 @@
       }
     }
   },
-  "defaultProject": "SongSearch2",
+  "defaultProject": "MusicAll",
   "schematics": {
     "@schematics/angular:component": {
       "styleext": "scss"
